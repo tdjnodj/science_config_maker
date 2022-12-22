@@ -118,6 +118,7 @@ if type == 3:
 
 # 生成配置
     print('{')
+    print('    "relay": {')
     print('        "server": "%s",' % sni)
     print('        "port": %s,' % port)
     print('        "token": "%s",' % token)
