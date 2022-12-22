@@ -1,5 +1,5 @@
 #coding=utf-8
-print('nekoray 配置生成')
+print('支持以下内核:')
 print('1.trojan-go')
 print('2.hysteria')
 print('3.tuic')
