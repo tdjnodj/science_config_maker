@@ -75,8 +75,8 @@ if type == 2: # hysteria
     alpn = input('alpn(建议为h3):')
     server_name = input('服务器名称：')
     insecure = int(input('跳过证书验证？（1.跳过2.不跳过）'))
-    obfs = input('混淆密码(obfs,不等于字符串验证密钥')
-    auth_str = input('字符串验证密钥(不支持base64):')
+    obfs = input('混淆密码(obfs,不等于字符串验证密钥): ')
+    auth_str = input('字符串验证密钥(不支持base64): ')
 
     # 生成配置
     print('{')
@@ -128,14 +128,10 @@ if type == 3:
         print('        "udp_relay_mode": "udp",')
     else:
         print('        "udp_relay_mode": "quic",')
-    print('        "heartbeat_interval": 10000,')
-    print('        "alpn": ["h3"],')
     if rtt == 1:
-        print('        "reduce_rtt": true,')
+        print('        "reduce_rtt": true')
     else:
-        print('        "reduce_rtt": false,')
-    print('        "request_timeout": 8000,')
-    print('        "max_udp_relay_packet_size": 1500')
+        print('        "reduce_rtt": false')
     print('    },')
     print('    "local": {')
     print('        "port": 1080,')
